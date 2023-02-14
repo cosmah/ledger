@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,11 +8,11 @@ class MyApp extends StatelessWidget {
     //root widget
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return FluentApp(
       title: 'LEDGER',
-      theme: ThemeData(
+      theme: FluentThemeData(
 
-        primarySwatch: Colors.orange,
+        accentColor: Colors.green,
       ),
       home: const HomePage(),
     );
@@ -29,6 +29,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const NavigationView(
+      content: Center(
+        child: Icon(
+            FluentIcons.f12_dev_tools,
+            size: 40,
+        ),
+
+      ),
+    );
   }
 }
